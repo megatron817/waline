@@ -8,7 +8,7 @@ module.exports = Application({
         您在博客<a style="text-decoration:none;color: #12ADDB;" href="{{site.url}}" target="_blank">{{site.name}}</a>上的评论有了新的回复
       </h2>
       <div style="padding:0 12px 0 12px;margin-top:18px">
-		<p>{{parent.nick}}，您曾发表评论：</p>
+		<p><strong>{{parent.nick}}</strong>，您曾发表评论：</p>
         <div style="background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;">{{parent.comment | safe}}</div>
         <p><strong>{{self.nick}}</strong> 回复说：</p>
         <div style="background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;">{{self.comment | safe}}</div>
@@ -20,7 +20,7 @@ module.exports = Application({
 	  </div>
 	  <br/>
     </div>`,
-  mailSubjectAdmin: '您的博客「{{site.name}}」收到了新评论',
+  mailSubjectAdmin: '亲爱的博主，您的博客「{{site.name}}」收到了新评论',
   mailTemplateAdmin: `
     <div style="border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;margin:50px auto;font-size:12px;">
       <h2 style="border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;">        
